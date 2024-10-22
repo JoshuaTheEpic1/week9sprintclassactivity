@@ -1,0 +1,48 @@
+User Registration and Login (Optional)
+As a user, I want to register an account with my email and password, so that I can securely access my tasks.
+As a user, I want to log in to my account using my email and password, so that I can access my tasks from any device.
+
+Task Creation
+As a user, I want to create a task with a title, description, and due date, so that I can keep track of my responsibilities.
+As a user, I want to set a priority level for each task, so that I can focus on the most important tasks first.
+
+Task Editing
+As a user, I want to edit the title of a task, so that I can correct or update it.
+As a user, I want to edit the description of a task, so that I can add more details or make changes.
+As a user, I want to edit the due date of a task, so that I can reschedule it if needed.
+
+Task Deletion
+As a user, I want to delete a task, so that I can remove tasks that are no longer relevant.
+
+Task Completion
+As a user, I want to mark a task as completed, so that I can keep track of what I have accomplished.
+
+Task Filtering
+As a user, I want to view all tasks, so that I can see everything I need to do.
+As a user, I want to filter tasks to show only completed tasks, so that I can review what I have finished.
+As a user, I want to filter tasks to show only pending tasks, so that I can focus on what still needs to be done.
+
+Task Sorting
+As a user, I want to sort tasks by due date, so that I can see which tasks are due soonest.
+As a user, I want to sort tasks by priority, so that I can focus on the most important tasks first.
+
+Task Notifications
+As a user, I want to receive notifications for upcoming due dates, so that I don’t forget to complete my tasks on time.
+
+Task Categories
+As a user, I want to categorize tasks into different groups (e.g., work, personal), so that I can organize my tasks better.
+
+Task Search
+As a user, I want to search for tasks by keyword, so that I can quickly find specific tasks.
+
+Recurring Tasks
+As a user, I want to create recurring tasks, so that I can automatically add tasks that repeat on a regular basis.
+
+Task Sharing
+As a user, I want to share tasks with other users, so that we can collaborate on tasks together.
+
+Task Comments
+As a user, I want to add comments to tasks, so that I can keep notes or updates related to the task.
+
+Task Attachments
+As a user, I want to attach files to tasks, so that I can include relevant documents or images.
