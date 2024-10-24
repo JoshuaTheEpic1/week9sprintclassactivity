@@ -34,6 +34,14 @@ class TaskManager:
         else:
             print("Task not found.")
 
+    def sort_tasks(self, by="title", reverse=False):
+        if by == "title":
+            self.tasks.sort(key=lambda task: task.title, reverse=reverse)
+        elif by == "due_date":
+            self.tasks.sort(key=lambda task: task.due_date, reverse=reverse)
+        else:
+            print("Invalid sort key. Use 'title' or 'due_date'.")
+
     def print_tasks(self):
         for i, task in enumerate(self.tasks):
             print(f"Task {i + 1}:")
