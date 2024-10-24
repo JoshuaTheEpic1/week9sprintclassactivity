@@ -42,6 +42,18 @@ class TaskManager:
         else:
             print("Invalid sort key. Use 'title' or 'due_date'.")
 
+    def filter_tasks(self, title_contains=None, due_date=None):
+        filtered_tasks = self.tasks
+        if title_contains:
+            filtered_tasks = [task for task in filtered_tasks if title_contains.lower() in task.title.lower()]
+        if due_date:
+            filtered_tasks = [task for task in filtered_tasks if task.due_date == due_date]
+        
+        for i, task in enumerate(filtered_tasks):
+            print(f"Task {i + 1}:")
+            task.print_task()
+            print()
+
     def print_tasks(self):
         for i, task in enumerate(self.tasks):
             print(f"Task {i + 1}:")
