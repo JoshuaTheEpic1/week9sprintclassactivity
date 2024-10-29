@@ -1,22 +1,24 @@
+import task
+
 class TaskManager:
     def __init__(self):
         self.tasks = []
 
     def add_task(self, title, description, due_date):
-        self.tasks.append(Task(title, description, due_date))
+        self.tasks.append(task.task(title, description, due_date))
 
-    def find_task_by_title(self, title):
+    def find_task_by_title(self, title) -> task.task:
         for task in self.tasks:
             if task.title == title:
                 return task
         return None
 
-    def edit_task(self, title, new_title, description, due_date):
+    def edit_task(self, title, new_title = None, description = None, due_date = None):
         task = self.find_task_by_title(title)
         if task:
-            task.title = new_title
-            task.description = description
-            task.due_date = due_date
+            task.title = new_title if new_title != None else task.title
+            task.description = description if description != None else task.description
+            task.dueDate = due_date if due_date != None else task.dueDate
         else:
             print("Task not found.")
 
