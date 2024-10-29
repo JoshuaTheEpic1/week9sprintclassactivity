@@ -1,4 +1,4 @@
-class task:
+class Task:
     def __init__(self, description:str, title:str, dueDate:str) -> None:
         self.description = description
         self.title = title

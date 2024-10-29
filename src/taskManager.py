@@ -1,13 +1,13 @@
-from task import task
+from task import Task
 
 class TaskManager:
     def __init__(self):
         self.tasks = []
 
     def add_task(self, title, description, due_date):
-        self.tasks.append(task(title, description, due_date))
+        self.tasks.append(Task(title, description, due_date))
 
-    def find_task_by_title(self, title) -> task:
+    def find_task_by_title(self, title) -> Task:
         for task in self.tasks:
             if task.title == title:
                 return task
