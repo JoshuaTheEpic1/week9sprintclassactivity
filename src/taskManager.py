@@ -13,12 +13,12 @@ class TaskManager:
                 return task
         return None
 
-    def edit_task(self, title, new_title = None, description = None, due_date = None):
+    def edit_task(self, title, new_title = "", description = "", due_date = ""):
         task = self.find_task_by_title(title)
         if task:
-            task.title = new_title if new_title != None else task.title
-            task.description = description if description != None else task.description
-            task.dueDate = due_date if due_date != None else task.dueDate
+            task.title = new_title if new_title != "" else task.title
+            task.description = description if description != "" else task.description
+            task.dueDate = due_date if due_date != "" else task.dueDate
         else:
             print("Task not found.")
 
