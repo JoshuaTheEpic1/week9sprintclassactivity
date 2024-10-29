@@ -18,7 +18,7 @@ class TaskManager:
         if task:
             task.title = new_title if new_title != "" else task.title
             task.description = description if description != "" else task.description
-            task.dueDate = due_date if due_date != "" else task.dueDate
+            task.due_date = due_date if due_date != "" else task.due_date
         else:
             print("Task not found.")
 
@@ -46,11 +46,11 @@ class TaskManager:
         else:
             print("Invalid sort key. Use 'title', 'due_date', or 'completed'.")
 
-    def filter_tasks(self, title_contains=None, due_date=None, completed=None, reverse=False):
+    def filter_tasks(self, title_contains="", due_date="", completed=None, reverse=False):
         filtered_tasks = self.tasks
-        if title_contains:
+        if title_contains != "":
             filtered_tasks = [task for task in filtered_tasks if title_contains.lower() in task.title.lower()]
-        if due_date:
+        if due_date != "":
             filtered_tasks = [task for task in filtered_tasks if task.due_date == due_date]
         if completed is not None:
             filtered_tasks = [task for task in filtered_tasks if task.is_completed == completed]
