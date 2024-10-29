@@ -59,11 +59,9 @@ class TaskManager:
         
         for i, task in enumerate(filtered_tasks):
             print(f"Task {i + 1}:")
-            task.print_task()
-            print()
+            print(task)
 
     def print_tasks(self):
         for i, task in enumerate(self.tasks):
             print(f"Task {i + 1}:")
-            task.print_task()
-            print()
+            print(task)
