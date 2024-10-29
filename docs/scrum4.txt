@@ -1,0 +1,11 @@
+Scrum 4
+
+RM: Caleb
+SM: Conner
+
+Update Class diagram - Conner to update
+SRS good/completed
+In sequence diagram add filter_task()
+
+Test Cases
+test_add_task()
