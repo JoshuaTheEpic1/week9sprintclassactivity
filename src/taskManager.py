@@ -46,7 +46,7 @@ class TaskManager:
         else:
             print("Invalid sort key. Use 'title', 'due_date', or 'completed'.")
 
-    def filter_tasks(self, title_contains=None, due_date=None, completed=None):
+    def filter_tasks(self, title_contains=None, due_date=None, completed=None, reverse=False):
         filtered_tasks = self.tasks
         if title_contains:
             filtered_tasks = [task for task in filtered_tasks if title_contains.lower() in task.title.lower()]
@@ -54,6 +54,8 @@ class TaskManager:
             filtered_tasks = [task for task in filtered_tasks if task.due_date == due_date]
         if completed is not None:
             filtered_tasks = [task for task in filtered_tasks if task.is_completed == completed]
+        
+        filtered_tasks.sort(key=lambda task: task.title, reverse=reverse)
         
         for i, task in enumerate(filtered_tasks):
             print(f"Task {i + 1}:")
