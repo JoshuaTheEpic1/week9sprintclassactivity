@@ -5,6 +5,7 @@ def main():
   task_manager = TaskManager()
   while True:
     choice = input("Choose an Item: \n 1. Add Item \n 2. Delete Item \n 3. Edit Item \n 4. Filter Items \n 5. Mark Item as complete \n")
+    task_manager.print_tasks()
     match choice:
       case '1': 
         title = input("enter a title: \n")
