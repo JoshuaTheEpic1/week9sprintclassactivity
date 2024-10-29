@@ -1,3 +1,9 @@
+#include "task.h"
+#include "taskManager.h"
+#include <sstream>
+#include <algorithm>
+#include <iostream>
+
 class TaskManager:
     def __init__(self):
         self.tasks = []
