@@ -1,3 +1,7 @@
+#include <iostream>
+#include "TaskManager.h"
+#include "Task.h"
+
 def main():
     task_manager = TaskManager()
   while True:
