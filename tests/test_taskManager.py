@@ -1,5 +1,5 @@
 import pytest
-import taskManager
+from src import taskManager
 
 @pytest.fixture
 def task_manager():
@@ -40,9 +40,6 @@ def test_filter_tasks_by_completed(task_manager):
     filtered = task_manager.filter_tasks(completed=True)
     assert len(filtered) == 1
     assert filtered[0].is_completed is True
-from src import taskManager
-
-
 
 def test_add_task():
     manager = taskManager.TaskManager()
@@ -60,3 +57,11 @@ def test_find_task_by_title():
     assert manager.find_task_by_title('Gamma').description == 'Omega'
     #test not exist
     assert manager.find_task_by_title('Zeta') is None
+    
+def test_mark_as_complete(task_manager):
+    task_manager.mark_task_as_completed("Task D")
+    assert task_manager.find_task_by_title("Task D").is_completed == true
+def test_delete_task(task_manager):
+    temp = task_manager.tasks.len
+    task_manager.delete_task("Task D")
+    assert task_manager.tasks.len() == temp -1
